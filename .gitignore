@@ -1,0 +1,19 @@
+questions*
+.DS_Store
+*.swp
+*.log
+# emacs
+*~
+\#*\#
+.\#*
+# Macs
+*.DS_Store
+
+._*
+coverage/
+spec/examples.txt
+
+/.bundle
+.yardoc
+doc
+db/schema*

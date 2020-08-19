@@ -1,0 +1,13 @@
+FROM registry/api:{TAG}
+
+# Install git for gem on github
+RUN ADDITIONAL_BUILD_PACKAGES=git \
+    /sbin/with_build_deps bundle install \
+        --binstubs \
+        --with development test \
+        --deployment
+
+COPY spec/ /app/spec/
+COPY .rspec /app/
+
+COPY features/ /app/features/

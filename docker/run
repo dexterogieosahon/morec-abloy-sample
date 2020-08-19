@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cd /app/
+exec /sbin/setuser vd /app/bin/puma -C /app/config/puma.rb
